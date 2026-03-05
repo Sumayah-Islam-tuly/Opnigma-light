@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | Opnigma</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .service-block {
+            padding: 8rem 0;
+            border-bottom: 1px solid var(--border-subtle);
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .service-info .badge {
+            color: var(--accent);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 0.875rem;
+            margin-bottom: 1.5rem;
+            display: inline-block;
+        }
+
+        .service-info h2 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .service-info p.lead {
+            font-size: 1.25rem;
+            color: var(--text-muted);
+            margin-bottom: 2.5rem;
+        }
+
+        .service-features {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+
+        .feature-item {
+            background: rgba(255, 255, 255, 0.02);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+            border: 1px solid var(--border-subtle);
+            display: flex;
+            gap: 1.5rem;
+            transition: var(--transition-normal);
+        }
+
+        .feature-item:hover {
+            border-color: var(--border-strong);
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .feature-icon {
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+
+        .feature-text h4 {
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .feature-text p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .service-visual {
+            position: relative;
+        }
+
+        .service-visual img {
+            border-radius: var(--radius-xl);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border-strong);
+        }
+
+        .reverse .service-info {
+            grid-column: 2;
+            grid-row: 1;
+        }
+
+        .reverse .service-visual {
+            grid-column: 1;
+            grid-row: 1;
+        }
+
+        @media (max-width: 991px) {
+
+            .service-grid,
+            .reverse .service-info,
+            .reverse .service-visual {
+                grid-template-columns: 1fr;
+                grid-column: 1;
+                grid-row: auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-blue.png" alt="Opnigma Logo"
+                    style="height: 55px;">
+            </a>
+            <button class="mobile-menu-btn"><i data-lucide="menu"></i></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html" class="active">Services</a>
+                <a href="use-cases.html">Use Cases</a>
+                <a href="approach.html">Approach</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Book a
+                    Call</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <span class="badge"
+                style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; display: block;">Capabilities</span>
+            <h1 class="text-gradient">Engineered Workflows.</h1>
+            <p>End-to-end operational transformation designed to eliminate drag and permanently accelerate execution.
+            </p>
+        </div>
+    </div>
+
+    <!-- Service 1 -->
+    <section class="service-block" id="infrastructure">
+        <div class="container service-grid">
+            <div class="service-info">
+                <span class="badge">01</span>
+                <h2>Infrastructure Modernization</h2>
+                <p class="lead">For organizations outgrowing their legacy systems. We build scalable, resilient cloud
+                    architectures capable of handling real-world operational demand.</p>
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i data-lucide="cloud" class="feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Cloud Migration & Re-architecture</h4>
+                            <p>Transition from on-prem to secure, highly-available cloud environments (AWS/Azure)
+                                without operational downtime.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="database" class="feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Database Operations</h4>
+                            <p>Unify fragmented databases into centralized, real-time data lakes to serve as the single
+                                source of truth.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-visual">
+                <img src="assets/images/infrastructure.jpg" alt="Infrastructure Visualization">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 2 -->
+    <section class="service-block" id="automation">
+        <div class="container service-grid reverse">
+            <div class="service-info">
+                <span class="badge">02</span>
+                <h2>Workflow Automation</h2>
+                <p class="lead">For high-volume operations trapped by manual workarounds. We deploy intelligent
+                    automation to reclaim thousands of hours.</p>
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i data-lucide="cpu" class="feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Process Automation (RPA)</h4>
+                            <p>Automate repetitive administrative tasks: document extraction, invoice processing, and
+                                manifest reconciliation.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="zap" class="feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Event-Driven Workflows</h4>
+                            <p>Trigger instant system actions across the warehouse floor based on real-time operational
+                                events.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-visual">
+                <img src="assets/images/automation.jpg" alt="Automation Visualization">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 3 -->
+    <section class="service-block" id="integration">
+        <div class="container service-grid">
+            <div class="service-info">
+                <span class="badge">03</span>
+                <h2>System Integration</h2>
+                <p class="lead">For operations suffering from fragmented tech stacks. We connect disconnected WMS, TMS,
+                    and ERP systems into one cohesive operational engine.</p>
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i data-lucide="cable" class="feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Legacy to Modern APIs</h4>
+                            <p>Bridge the gap between outdated proprietary software and modern SaaS platforms using
+                                custom middleware.</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <i data-lucide="arrow-right-left" class="feature-icon"></i>
+                        <div class="feature-text">
+                            <h4>Bi-Directional Sync</h4>
+                            <p>Ensure inventory, orders, and fulfillment statuses are perfectly mirrored across all your
+                                platforms simultaneously.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="service-visual">
+                <img src="assets/images/integration.jpg" alt="System Integration">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section">
+        <div class="container" style="text-align: center;">
+            <div class="glass-card" style="max-width: 800px; margin: 0 auto; padding: 5rem 3rem;">
+                <h2 style="font-size: 3rem; margin-bottom: 1.5rem;">Need a custom capability?</h2>
+                <p style="color: var(--text-muted); font-size: 1.25rem; margin-bottom: 2.5rem;">We specialize in solving
+                    complex operational friction. Let's discuss your unique technical roadblocks.</p>
+                <a href="contact.html" class="btn btn-primary" style="padding: 1.2rem 3rem; font-size: 1.1rem;">Talk to
+                    an Engineer</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-blue.png" alt="Opnigma Logo"
+                        style="height: 55px;">
+                    <p>Opnigma exists for companies ready to move beyond patchwork fixes and incremental upgrades. We
+                        design systems that think ahead.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Cloud Migration</a></li>
+                        <li><a href="services.html">Workflow Automation</a></li>
+                        <li><a href="services.html">System Integration</a></li>
+                        <li><a href="services.html">Architecture Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <li><a href="approach.html">Framework</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Insights</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> Opnigma. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approach & Methodology | Opnigma</title>
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        .timeline-section {
+            padding: 8rem 0;
+            position: relative;
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 4rem;
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline-grid::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--secondary), transparent);
+            transform: translateX(-50%);
+        }
+
+        .timeline-step {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            z-index: 2;
+        }
+
+        .timeline-step.even {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: rgba(15, 23, 42, 0.6);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border-subtle);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+            transition: var(--transition-normal);
+        }
+
+        .timeline-content:hover {
+            border-color: var(--secondary);
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .timeline-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--bg-surface);
+            border: 2px solid var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--secondary);
+            box-shadow: 0 0 0 8px var(--bg-base);
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content span.step-number {
+            display: block;
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .timeline-grid::before {
+                left: 30px;
+            }
+
+            .timeline-icon {
+                left: 30px;
+            }
+
+            .timeline-step,
+            .timeline-step.even {
+                flex-direction: column;
+                align-items: flex-start;
+                padding-left: 80px;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">
+                <img src="assets/images/logo-blue.png" alt="Opnigma Logo"
+                    style="height: 55px;">
+            </a>
+            <button class="mobile-menu-btn"><i data-lucide="menu"></i></button>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="use-cases.html">Use Cases</a>
+                <a href="approach.html" class="active">Approach</a>
+                <a href="about.html">About</a>
+                <a href="contact.html" class="btn btn-primary" style="padding: 0.6rem 1.5rem; font-size: 0.9rem;">Book a
+                    Call</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-header">
+        <div class="container">
+            <span class="badge"
+                style="color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1rem; display: block;">Methodology</span>
+            <h1 class="text-gradient">No Patchwork Fixes.</h1>
+            <p>Our transformation framework maps operational reality against technical possibility.</p>
+        </div>
+    </div>
+
+    <section class="timeline-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>The 5-Step Execution Cycle</h2>
+                <p>How we diagnose friction, build systems that eliminate it, and ensure those systems scale.</p>
+            </div>
+
+            <div class="timeline-grid">
+                <!-- Step 1 -->
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <span class="step-number">Phase 1</span>
+                        <h3>Discover</h3>
+                        <p style="color: var(--text-muted);">Uncover operational drag and identify misaligned systems
+                            across the supply chain flow.</p>
+                    </div>
+                    <div class="timeline-icon"><i data-lucide="search"></i></div>
+                </div>
+                <!-- Step 2 -->
+                <div class="timeline-step even">
+                    <div class="timeline-content">
+                        <span class="step-number">Phase 2</span>
+                        <h3>Map</h3>
+                        <p style="color: var(--text-muted);">Blueprint the ideal integration model, mapping the
+                            future-state data flow between human execution and technical limits.</p>
+                    </div>
+                    <div class="timeline-icon"><i data-lucide="map"></i></div>
+                </div>
+                <!-- Step 3 -->
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <span class="step-number">Phase 3</span>
+                        <h3>Architect</h3>
+                        <p style="color: var(--text-muted);">Design a flexible, scalable cloud infrastructure and data
+                            pipeline built for the future.</p>
+                    </div>
+                    <div class="timeline-icon"><i data-lucide="layers"></i></div>
+                </div>
+                <!-- Step 4 -->
+                <div class="timeline-step even">
+                    <div class="timeline-content">
+                        <span class="step-number">Phase 4</span>
+                        <h3>Automate</h3>
+                        <p style="color: var(--text-muted);">Deploy event-driven workflow automation to instantly boost
+                            throughput and cut manual touches.</p>
+                    </div>
+                    <div class="timeline-icon"><i data-lucide="cpu"></i></div>
+                </div>
+                <!-- Step 5 -->
+                <div class="timeline-step">
+                    <div class="timeline-content">
+                        <span class="step-number">Phase 5</span>
+                        <h3>Operationalize</h3>
+                        <p style="color: var(--text-muted);">Ensure operations teams successfully adopt new tech for
+                            sustained, engineered momentum.</p>
+                    </div>
+                    <div class="timeline-icon"><i data-lucide="rocket"></i></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Engagement Models -->
+    <section class="section" style="background: rgba(0, 0, 0, 0.03); border-top: 1px solid var(--border-subtle);">
+        <div class="container">
+            <div class="section-title">
+                <h2>How We Engage</h2>
+                <p>Adaptable partnership models.</p>
+            </div>
+
+            <div class="value-grid">
+                <div class="glass-card value-card">
+                    <div class="icon-wrapper"><i data-lucide="stethoscope"></i></div>
+                    <h3>Technical Assessments</h3>
+                    <p>A deep-dive audit of your current tech stack versus your operational bottlenecks. Deliverable: An
+                        integration and optimization roadmap.</p>
+                </div>
+                <div class="glass-card value-card">
+                    <div class="icon-wrapper"><i data-lucide="flag"></i></div>
+                    <h3>Targeted Pilots</h3>
+                    <p>Rapid deployment of automation or integration to solve one key chokepoint, proving ROI before
+                        enterprise rollouts.</p>
+                </div>
+                <div class="glass-card value-card">
+                    <div class="icon-wrapper"><i data-lucide="building-2"></i></div>
+                    <h3>Full Transformation</h3>
+                    <p>End-to-end partnership from system architecture design through development, integration, and
+                        operational change management.</p>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="contact.html" class="btn btn-primary">Start with an Assessment</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="assets/images/logo-blue.png" alt="Opnigma Logo"
+                        style="height: 55px;">
+                    <p>Opnigma exists for companies ready to move beyond patchwork fixes and incremental upgrades. We
+                        design systems that think ahead.</p>
+                </div>
+                <div>
+                    <h4 class="footer-title">Solutions</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html">Cloud Migration</a></li>
+                        <li><a href="services.html">Workflow Automation</a></li>
+                        <li><a href="services.html">System Integration</a></li>
+                        <li><a href="services.html">Architecture Design</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="use-cases.html">Use Cases</a></li>
+                        <li><a href="approach.html">Framework</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer-title">Connect</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">Insights</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; <span id="year"></span> Opnigma. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>
